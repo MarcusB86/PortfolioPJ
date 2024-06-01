@@ -1,34 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-const data = {
-    "count": 82,
-    "next": "https://swapi.dev/api/people/?page=2",
-    "previous": null,
-    "results": [
-        {
-            "name": "Luke Skywalker",
-            "height": "172",
-            "mass": "77",
-            "hair_color": "blond",
-            "skin_color": "fair",
-            "eye_color": "blue",
-            "birth_year": "19BBY",
-            "gender": "male",
-            "homeworld": "https://swapi.dev/api/planets/1/",
-            "films": [
-                "https://swapi.dev/api/films/1/",
-                "https://swapi.dev/api/films/2/",
-                "https://swapi.dev/api/films/3/",
-                "https://swapi.dev/api/films/6/"
-            ]
-        }
-    ]
-};
-
-function ShowPage() {
+function ShowPage({ people }) {
     const { index } = useParams();
-    const character = data.results[index];
+    const character = people[index];
 
     if (!character) {
         return <div>Character not found</div>;

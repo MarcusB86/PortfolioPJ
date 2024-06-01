@@ -1,0 +1,13 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+  }
+  
+  .page-container {
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    
+  }
