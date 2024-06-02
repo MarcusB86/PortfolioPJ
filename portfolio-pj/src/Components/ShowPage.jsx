@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import './ShowPage.css';
 
 function ShowPage({ people }) {
     const { index } = useParams();
@@ -10,7 +11,7 @@ function ShowPage({ people }) {
     }
 
     return (
-        <div>
+        <div className="character-details">
             <h1>{character.name}</h1>
             <p><strong>Height:</strong> {character.height} cm</p>
             <p><strong>Mass:</strong> {character.mass} kg</p>
@@ -19,9 +20,9 @@ function ShowPage({ people }) {
             <p><strong>Eye Color:</strong> {character.eye_color}</p>
             <p><strong>Birth Year:</strong> {character.birth_year}</p>
             <p><strong>Gender:</strong> {character.gender}</p>
-            <Link to="/">Back to Home</Link>
+            <Link to="/" className="back-link">Back to Home</Link>
         </div>
     );
-};
+}
 
 export default ShowPage;

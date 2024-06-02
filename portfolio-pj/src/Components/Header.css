@@ -5,3 +5,6 @@ h1 img {
 li {
     text-align: center;
 }
+.nav-links {
+    list-style: none;
+}

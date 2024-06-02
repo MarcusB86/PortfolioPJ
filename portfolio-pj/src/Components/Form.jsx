@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import'./Home.css'
+import './Home.css'; // Ensure your CSS file is properly imported
 
 export default function Form() {
     const [searchPeople, setSearchPeople] = useState('');
     const [people, setPeople] = useState([]);
     const [allPeople, setAllPeople] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         fetch('https://swapi.dev/api/people/')
@@ -21,10 +23,12 @@ export default function Form() {
                 }
                 setAllPeople(data.results);
                 setPeople(data.results);
+                setLoading(false);
             })
             .catch(error => {
                 console.error('Error fetching people:', error);
-                setPeople([]);
+                setError(error.message);
+                setLoading(false);
             });
     }, []);
 
@@ -34,6 +38,14 @@ export default function Form() {
             person.name.toLowerCase().includes(searchPeople.toLowerCase())
         );
         setPeople(filteredPeople);
+    }
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>{error}</p>;
     }
 
     return (
