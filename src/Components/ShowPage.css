@@ -1,0 +1,46 @@
+.back-link:hover {
+    background-color: #555;
+}
+
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: crimson;
+    border-radius: 4px;
+}
+
+.character-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:crimson#f9f9f9;
+  }
+  
+  .character-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .character-details p {
+    margin-bottom: 5px;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: crimson;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  p{
+    color: crimson;
+  }
+  

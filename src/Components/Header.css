@@ -1,0 +1,51 @@
+h1 img {
+    width: 500px; 
+    height: auto; 
+}
+/* li {
+    text-align: center;
+} */
+.nav-links {
+    list-style: none;
+}
+.logo {
+    width: 100%;
+    position: grid;
+    top: 10px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: crimson;
+    font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    color: crimson; 
+  }
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  
+
+
+  
